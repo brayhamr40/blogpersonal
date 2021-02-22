@@ -256,6 +256,7 @@ h2
     max-width: 1000px;
     margin: 0 auto;
     display: inherit;
+    flex: 1;
     justify-content: inherit;
     align-items: inherit;
     height: inherit;
@@ -266,9 +267,38 @@ h2
     
 }
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 767px)
 {
-
+    .header div
+    {
+        display: block;
+    }
+    .header
+    {
+        height: auto;
+    }
+    .header ol
+    {
+        display: block;
+    }
+    .header ol li 
+    {
+        height: 50px;
+    }
+    .header div nav ol li a 
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .header .menu
+    {
+        display: block;
+    }
+    .header .logo
+    {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 @media screen and (max-width: 480px)
 {
