@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./stilos.css">
 </head>
 <body>
-    <i class="icon-menu burguer-button"></i>
+    <i class="icon-menu burguer-button" id="burguer-menu"></i>
     <header class="header">
         <div>   
             <div class="container">
@@ -152,5 +152,34 @@
             </div>
         </div>
     </footer> 
+    <script>
+        const ipad = window.matchMedia('screen and (max-width: 767px)')
+        const menu = document.querySelector('.menu');
+        console.log(menu);
+        const burguerbutton = document.querySelector('#burguer-menu')
+        console.log(burguerbutton);
+        
+        ipad.addListener(validation)
+
+        function validation(event)
+        {
+            if (event.matches)
+            {
+                burguerbutton.addEventListener('click', hideShow)
+            }
+            else{
+                burguerbutton.removeEventListener('click', hideShow)
+            }
+        }
+        function hideShow (){
+            if (menu.classList.contains('is-active'))
+            {
+                menu.classList.remove('is-active');
+            }
+            else{
+                menu.classList.add('is-active');
+            }
+        }
+    </script>
 </body>
 </html>
